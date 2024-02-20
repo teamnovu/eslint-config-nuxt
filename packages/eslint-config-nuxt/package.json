@@ -26,12 +26,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/teamnovu/eslint-config-nuxt.git"
+    "url": "git+https://github.com/teamnovu/code-standards.git"
   },
   "author": "Patrick Stillhart",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/teamnovu/eslint-config-nuxt/issues"
+    "url": "https://github.com/teamnovu/code-standards/issues"
   },
-  "homepage": "https://github.com/teamnovu/eslint-config-nuxt#readme"
+  "homepage": "https://github.com/teamnovu/code-standards/blob/main/packages/eslint-config-nuxt/READM.md"
 }
