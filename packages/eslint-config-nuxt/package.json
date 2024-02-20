@@ -1,6 +1,6 @@
 {
   "name": "@teamnovu/eslint-config-nuxt",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "@teamnovus coding guidelines",
   "main": "index.js",
   "peerDependencies": {
@@ -33,5 +33,5 @@
   "bugs": {
     "url": "https://github.com/teamnovu/code-standards/issues"
   },
-  "homepage": "https://github.com/teamnovu/code-standards/blob/main/packages/eslint-config-nuxt/READM.md"
+  "homepage": "https://github.com/teamnovu/code-standards/blob/main/packages/eslint-config-nuxt/README.md"
 }
