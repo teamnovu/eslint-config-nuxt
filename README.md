@@ -1,2 +1,2 @@
 # code-standards
-This package provides shared configurations projects.
+This package provides shared configurations for projects.
