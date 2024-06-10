@@ -1,7 +1,6 @@
-require('@rushstack/eslint-patch/modern-module-resolution');
+require('@rushstack/eslint-patch/modern-module-resolution')
 
 module.exports = {
-
   extends: [
     '@nuxtjs/eslint-config-typescript',
     'plugin:nuxt/recommended',
@@ -22,6 +21,8 @@ module.exports = {
       },
     ],
     'no-console': 'off',
+    'no-mixed-operators': ['error', { allowSamePrecedence: true }],
+    'prefer-destructuring': ['error', { array: false, object: true }],
     'vue/no-v-html': 'off',
     'vue/multi-word-component-names': 'off',
     'vue/no-multiple-template-root': 'off',
@@ -94,5 +95,4 @@ module.exports = {
       },
     ],
   },
-
-};
+}
