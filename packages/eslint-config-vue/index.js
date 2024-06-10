@@ -45,6 +45,10 @@ module.exports = {
             'warn', { devDependencies: true },
         ],
 
+        'no-mixed-operators': [
+          'error', { allowSamePrecedence: true },
+        ],
+        'prefer-destructuring': ['error', { 'array': false, 'object': true }]
 
         'tailwindcss/no-custom-classname': 'off',
     },
