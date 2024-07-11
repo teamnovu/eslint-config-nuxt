@@ -80,7 +80,7 @@ module.exports = {
         },
       },
     ],
-    'vue/block-lang': ['error', { script: { lang: 'ts' } }],
+    // 'vue/block-lang': ['error', { script: { lang: 'ts' } }],
     'vue/html-button-has-type': 'error',
     'vue/block-order': ['error', { order: ['template', 'script', 'style'] }],
     'vue/block-tag-newline': 'error',
