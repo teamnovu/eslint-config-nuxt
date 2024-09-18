@@ -1,8 +1,4 @@
 {
   "name": "code-standards",
-  "version": "1.0.0",
-  "devDependencies": {
-    "@teamnovu/eslint-config-nuxt": "^1.0.1",
-    "eslint": "^8.57.0"
-  }
+  "version": "1.0.0"
 }

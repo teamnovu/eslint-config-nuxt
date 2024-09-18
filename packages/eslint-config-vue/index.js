@@ -1,55 +1,52 @@
-import pluginVueA11y from 'eslint-plugin-vuejs-accessibility'
-import tailwind from 'eslint-plugin-tailwindcss'
-import prettier from 'eslint-plugin-prettier/recommended'
 import js from '@eslint/js'
+import pluginVue from 'eslint-plugin-vue'
+import pluginVueA11y from 'eslint-plugin-vuejs-accessibility'
+// import readableTailwind from 'eslint-plugin-readable-tailwind'
+import stylistic from '@stylistic/eslint-plugin'
+import tailwind from 'eslint-plugin-tailwindcss'
 
 export default [
   js.configs.recommended,
-  prettier,
-  ...tailwind.configs['flat/recommended'],
+  ...pluginVue.configs['flat/recommended'],
   ...pluginVueA11y.configs['flat/recommended'],
+  ...tailwind.configs['flat/recommended'],
+  // does not work with eslint9
+  //   readableTailwind.configs,
+  stylistic.configs['recommended-flat'],
 
-  /*************************
-   * novu rules
-   *************************/
   {
     rules: {
-      // prettier
+      // stylistic
       // *************
-      'prettier/prettier': [
-        'error',
-        {
-          semi: false,
-          singleQuote: true,
-          trailingComma: 'es5',
-          plugins: ['prettier-plugin-tailwindcss'],
-        },
-      ],
+      '@stylistic/newline-per-chained-call': ['error', { ignoreChainWithDepth: 2 }],
+      '@stylistic/nonblock-statement-body-position': 'error',
+      '@stylistic/one-var-declaration-per-line': 'error',
+      '@stylistic/operator-linebreak': ['error', 'before', { overrides: { '=': 'none' } }],
+      '@stylistic/function-paren-newline': ['error', 'multiline-arguments'],
+      '@stylistic/dot-location': ['error', 'property'],
+      '@stylistic/no-mixed-operators': ['error', { allowSamePrecedence: true }],
+      '@stylistic/comma-dangle': ['error', {
+        arrays: 'always-multiline',
+        objects: 'always-multiline',
+        imports: 'always-multiline',
+        exports: 'always-multiline',
+        functions: 'never',
+      }],
 
       // common
       // *************
-      'comma-dangle': [
-        'error',
-        {
-          arrays: 'always-multiline',
-          objects: 'always-multiline',
-          imports: 'always-multiline',
-          exports: 'always-multiline',
-          functions: 'never',
-        },
-      ],
-      'no-console': 'off',
-      // conflicts with prettier (https://github.com/prettier/prettier/issues/187)
-      //'no-mixed-operators': ['error', { allowSamePrecedence: true }],
+      'no-console': ['error', { allow: ['warn', 'error'] }],
       'prefer-destructuring': ['error', { array: false, object: true }],
       'no-unused-vars': ['error', { args: 'none' }],
+      '@typescript-eslint/no-explicit-any': 'warn',
 
       // vue
       // *************
-      'vue/no-v-html': 'off',
+      'vue/no-v-html': 'warn',
       'vue/multi-word-component-names': 'off',
       'vue/no-multiple-template-root': 'off',
       'vue/require-default-prop': 'off',
+      'vue/max-attributes-per-line': ['error', { singleline: 3 }],
       'vue/component-name-in-template-casing': [
         'error',
         'PascalCase',

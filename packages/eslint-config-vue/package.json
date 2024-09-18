@@ -1,15 +1,17 @@
 {
   "name": "@teamnovu/eslint-config-vue",
-  "version": "9.0.0",
+  "version": "9.0.3",
   "description": "@teamnovus coding guidelines",
   "main": "index.js",
+  "type": "module",
   "peerDependencies": {
     "eslint": ">= 9"
   },
   "dependencies": {
-    "eslint-plugin-prettier": "^5.2.1",
-    "eslint-plugin-readable-tailwind": "^1.5.2",
+    "@stylistic/eslint-plugin": "^2.8.0",
+    "eslint-plugin-readable-tailwind": "^1.8.0",
     "eslint-plugin-tailwindcss": "^3.17.4",
+    "eslint-plugin-vue": "^9.28.0",
     "eslint-plugin-vuejs-accessibility": "^2.4.1"
   },
   "repository": {
