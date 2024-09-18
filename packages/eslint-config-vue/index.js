@@ -25,6 +25,7 @@ export default [
       '@stylistic/function-paren-newline': ['error', 'multiline-arguments'],
       '@stylistic/dot-location': ['error', 'property'],
       '@stylistic/no-mixed-operators': ['error', { allowSamePrecedence: true }],
+      '@stylistic/brace-style': ['error', '1tbs', { allowSingleLine: true }],
       '@stylistic/comma-dangle': ['error', {
         arrays: 'always-multiline',
         objects: 'always-multiline',
