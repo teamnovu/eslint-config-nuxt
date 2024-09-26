@@ -35,6 +35,7 @@ export default [
       '@stylistic/no-mixed-operators': ['error', { allowSamePrecedence: true }],
       '@stylistic/brace-style': ['error', '1tbs', { allowSingleLine: true }],
       '@stylistic/function-paren-newline': 'off',
+      '@stylistic/member-delimiter-style': ['error', { multiline: { delimiter: 'semi' }, singleline: { delimiter: 'semi' } }],
 
       // common
       // ********************
