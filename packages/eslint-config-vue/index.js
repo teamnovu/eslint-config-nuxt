@@ -21,6 +21,9 @@ export default [
 
   {
     rules: {
+      // handled by TS
+      'no-undef': 'off',
+
       // stylistic
       // ********************
       '@stylistic/newline-per-chained-call': ['error', { ignoreChainWithDepth: 2 }],
@@ -31,13 +34,7 @@ export default [
       '@stylistic/dot-location': ['error', 'property'],
       '@stylistic/no-mixed-operators': ['error', { allowSamePrecedence: true }],
       '@stylistic/brace-style': ['error', '1tbs', { allowSingleLine: true }],
-      '@stylistic/comma-dangle': ['error', {
-        arrays: 'always-multiline',
-        objects: 'always-multiline',
-        imports: 'always-multiline',
-        exports: 'always-multiline',
-        functions: 'never',
-      }],
+      '@stylistic/function-paren-newline': 'off',
 
       // common
       // ********************
@@ -76,6 +73,15 @@ export default [
       'vue/block-order': ['error', { order: ['template', 'script', 'style'] }],
       'vue/block-tag-newline': 'error',
       'vue/max-lines-per-block': ['warn', { template: 300 }],
+      'vue/brace-style': ['error', '1tbs'],
+      'vue/comma-dangle': ['error', {
+        arrays: 'always-multiline',
+        objects: 'always-multiline',
+        imports: 'always-multiline',
+        exports: 'always-multiline',
+        generics: 'always-multiline',
+      }],
+
     },
   },
 ]

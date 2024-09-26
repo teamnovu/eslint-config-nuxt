@@ -1,6 +1,6 @@
 {
   "name": "@teamnovu/eslint-config-vue",
-  "version": "9.0.5",
+  "version": "9.0.6",
   "description": "@teamnovus coding guidelines",
   "main": "index.js",
   "type": "module",
