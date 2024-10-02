@@ -21,9 +21,6 @@ export default [
 
   {
     rules: {
-      // handled by TS
-      'no-undef': 'off',
-
       // stylistic
       // ********************
       '@stylistic/newline-per-chained-call': ['error', { ignoreChainWithDepth: 2 }],
@@ -42,6 +39,8 @@ export default [
       'no-console': ['error', { allow: ['warn', 'error'] }],
       'prefer-destructuring': ['error', { array: false, object: true }],
       'no-unused-vars': ['error', { args: 'none' }],
+      'eqeqeq': ['error', 'smart'],
+      'no-undef': 'off', // done by typescript
       '@typescript-eslint/no-explicit-any': 'warn',
 
       // vue
