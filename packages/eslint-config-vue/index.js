@@ -15,7 +15,14 @@ export default [
     rules: {
       ...pluginTailwind.configs.warning.rules,
       ...pluginTailwind.configs.error.rules,
-      'readable-tailwind/multiline': ['warn', { group: 'newLine', preferSingleLine: true, printWidth: 110 }],
+      'readable-tailwind/multiline': [
+        'warn',
+        {
+          group: 'newLine',
+          preferSingleLine: true,
+          printWidth: 110,
+        },
+      ],
     },
   },
 
@@ -31,13 +38,33 @@ export default [
       '@stylistic/dot-location': ['error', 'property'],
       '@stylistic/no-mixed-operators': ['error', { allowSamePrecedence: true }],
       '@stylistic/brace-style': ['error', '1tbs', { allowSingleLine: true }],
-      '@stylistic/function-paren-newline': 'off',
-      '@stylistic/member-delimiter-style': ['error', { multiline: { delimiter: 'none' }, singleline: { delimiter: 'semi' } }],
+      '@stylistic/array-bracket-newline': ['error', { multiline: true }],
+      '@stylistic/array-element-newline': [
+        'error',
+        {
+          multiline: true,
+          consistent: true,
+        },
+      ],
+      '@stylistic/object-curly-newline': [
+        'error',
+        {
+          multiline: true,
+          consistent: true,
+        },
+      ],
+      '@stylistic/object-property-newline': ['error', { allowAllPropertiesOnSameLine: false }],
 
       // common
       // ********************
       'no-console': ['error', { allow: ['warn', 'error'] }],
-      'prefer-destructuring': ['error', { array: false, object: true }],
+      'prefer-destructuring': [
+        'error',
+        {
+          array: false,
+          object: true,
+        },
+      ],
       'no-unused-vars': ['error', { args: 'none' }],
       'eqeqeq': ['error', 'smart'],
       'no-undef': 'off', // done by typescript
@@ -50,13 +77,24 @@ export default [
       'vue/no-multiple-template-root': 'off',
       'vue/require-default-prop': 'off',
       'vue/max-attributes-per-line': ['error', { singleline: 3 }],
-      'vue/component-name-in-template-casing': ['error', 'PascalCase', { registeredComponentsOnly: false, ignores: [] }],
+      'vue/component-name-in-template-casing': [
+        'error',
+        'PascalCase',
+        {
+          registeredComponentsOnly: false,
+          ignores: [],
+        },
+      ],
       'vue/custom-event-name-casing': ['error', 'kebab-case'],
       'vue/v-on-event-hyphenation': ['error', 'always', { autofix: false }],
       'vue/html-self-closing': [
         'error',
         {
-          html: { void: 'any', normal: 'always', component: 'always' },
+          html: {
+            void: 'any',
+            normal: 'always',
+            component: 'always',
+          },
           svg: 'always',
           math: 'always',
         },
@@ -64,7 +102,13 @@ export default [
       'vue/html-comment-content-spacing': ['error', 'always'],
       'vue/padding-line-between-blocks': ['error', 'always'],
       'vue/new-line-between-multi-line-property': ['error', { minLineOfMultilineProperty: 2 }],
-      'vue/no-useless-v-bind': ['error', { ignoreIncludesComment: true, ignoreStringEscape: true }],
+      'vue/no-useless-v-bind': [
+        'error',
+        {
+          ignoreIncludesComment: true,
+          ignoreStringEscape: true,
+        },
+      ],
       'vue/v-for-delimiter-style': ['error', 'in'],
       'vue/no-empty-component-block': ['error'],
       'vuejs-accessibility/label-has-for': ['error', { required: { some: ['id', 'nesting'] } }],
@@ -74,13 +118,23 @@ export default [
       'vue/block-tag-newline': 'error',
       'vue/max-lines-per-block': ['warn', { template: 300 }],
       'vue/brace-style': ['error', '1tbs'],
-      'vue/comma-dangle': ['error', {
-        arrays: 'always-multiline',
-        objects: 'always-multiline',
-        imports: 'always-multiline',
-        exports: 'always-multiline',
-        generics: 'always-multiline',
-      }],
+      'vue/comma-dangle': [
+        'error',
+        {
+          arrays: 'always-multiline',
+          objects: 'always-multiline',
+          imports: 'always-multiline',
+          exports: 'always-multiline',
+          generics: 'always-multiline',
+        },
+      ],
+      'vue/first-attribute-linebreak': [
+        'error',
+        {
+          singleline: 'beside',
+          multiline: 'below',
+        },
+      ],
 
     },
   },
