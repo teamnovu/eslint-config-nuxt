@@ -1,11 +1,13 @@
 import js from '@eslint/js'
 import pluginStylistic from '@stylistic/eslint-plugin'
+import tailwind from 'eslint-plugin-tailwindcss'
 import pluginTailwind from 'eslint-plugin-readable-tailwind'
 import pluginVue from 'eslint-plugin-vue'
 import pluginVueA11y from 'eslint-plugin-vuejs-accessibility'
 
 export default [
   js.configs.recommended,
+  ...tailwind.configs['flat/recommended'],
   ...pluginVue.configs['flat/recommended'],
   ...pluginVueA11y.configs['flat/recommended'],
   pluginStylistic.configs['recommended-flat'],
@@ -69,6 +71,10 @@ export default [
       'eqeqeq': ['error', 'smart'],
       'no-undef': 'off', // done by typescript
       '@typescript-eslint/no-explicit-any': 'warn',
+
+      // tailwind
+      // ********************
+      'tailwindcss/classnames-order': 'off',
 
       // vue
       // ********************
