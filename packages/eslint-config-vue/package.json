@@ -1,6 +1,6 @@
 {
   "name": "@teamnovu/eslint-config-vue",
-  "version": "9.0.11",
+  "version": "9.0.12",
   "description": "@teamnovus coding guidelines",
   "main": "index.js",
   "type": "module",
@@ -11,6 +11,7 @@
     "@stylistic/eslint-plugin": "^2.8.0",
     "eslint-plugin-readable-tailwind": "^1.8.0",
     "eslint-plugin-vue": "^9.28.0",
+    "@typescript-eslint/eslint-plugin": "^8.16.0",
     "eslint-plugin-vuejs-accessibility": "^2.4.1",
     "eslint-plugin-tailwindcss": "^3.17.5"
   },
