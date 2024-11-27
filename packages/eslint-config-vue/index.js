@@ -13,9 +13,15 @@ export default [
   ...pluginVueA11y.configs['flat/recommended'],
   pluginStylistic.configs['recommended-flat'],
   {
+    languageOptions: {
+      parserOptions: {
+        parser: '@typescript-eslint/parser',
+      },
+    },
+    ignores: ['**/dist/', '**/node_modules/'],
     plugins: {
       'readable-tailwind': pluginTailwind,
-      '@typescript-eslint': eslintPluginTypeScript
+      '@typescript-eslint': eslintPluginTypeScript,
     },
     rules: {
       ...pluginTailwind.configs.warning.rules,
@@ -30,8 +36,8 @@ export default [
       ],
     },
   },
-
   {
+    ignores: ['**/dist/', '**/node_modules/'],
     rules: {
       // stylistic
       // ********************
