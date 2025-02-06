@@ -1,7 +1,7 @@
 import js from '@eslint/js'
 import pluginStylistic from '@stylistic/eslint-plugin'
-import tailwind from 'eslint-plugin-tailwindcss'
 import pluginTailwind from 'eslint-plugin-readable-tailwind'
+import tailwind from 'eslint-plugin-tailwindcss'
 import pluginVue from 'eslint-plugin-vue'
 import pluginVueA11y from 'eslint-plugin-vuejs-accessibility'
 
@@ -56,6 +56,13 @@ export default [
         },
       ],
       '@stylistic/object-property-newline': ['error', { allowAllPropertiesOnSameLine: false }],
+      '@stylistic/max-len': [
+        'warn',
+        {
+          code: 110,
+          tabWidth: 2,
+        },
+      ],
 
       // common
       // ********************
@@ -141,7 +148,18 @@ export default [
           multiline: 'below',
         },
       ],
-
+      '@typescript-eslint/no-unused-vars': [
+        'error',
+        {
+          args: 'all',
+          argsIgnorePattern: '^_',
+          caughtErrors: 'all',
+          caughtErrorsIgnorePattern: '^_',
+          destructuredArrayIgnorePattern: '^_',
+          varsIgnorePattern: '^_',
+          ignoreRestSiblings: true,
+        },
+      ],
     },
   },
 ]
