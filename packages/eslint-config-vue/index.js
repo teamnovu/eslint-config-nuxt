@@ -3,6 +3,7 @@ import pluginStylistic from '@stylistic/eslint-plugin'
 import pluginTailwind from 'eslint-plugin-readable-tailwind'
 import tailwind from 'eslint-plugin-tailwindcss'
 import pluginVue from 'eslint-plugin-vue'
+import eslintPluginTypeScript from '@typescript-eslint/eslint-plugin'
 import pluginVueA11y from 'eslint-plugin-vuejs-accessibility'
 
 export default [
@@ -11,9 +12,17 @@ export default [
   ...pluginVue.configs['flat/recommended'],
   ...pluginVueA11y.configs['flat/recommended'],
   pluginStylistic.configs['recommended-flat'],
-
   {
-    plugins: { 'readable-tailwind': pluginTailwind },
+    languageOptions: {
+      parserOptions: {
+        parser: '@typescript-eslint/parser',
+      },
+    },
+    ignores: ['**/dist/', '**/node_modules/'],
+    plugins: {
+      'readable-tailwind': pluginTailwind,
+      '@typescript-eslint': eslintPluginTypeScript,
+    },
     rules: {
       ...pluginTailwind.configs.warning.rules,
       ...pluginTailwind.configs.error.rules,
@@ -27,8 +36,8 @@ export default [
       ],
     },
   },
-
   {
+    ignores: ['**/dist/', '**/node_modules/'],
     rules: {
       // stylistic
       // ********************
